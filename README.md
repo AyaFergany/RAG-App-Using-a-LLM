@@ -1,7 +1,7 @@
 # RAG-App-Using-a-LLM
 
 
-1. I used Weaviate, which is a vector database, and vector similarity search is prevalent in retrieval-augmented applications. As you might imagine, we will be using Weaviate to power our RAG application. In addition, we’ll be using local LLM and embedding models, making it safe and convenient when dealing with private and confidential information that mustn’t leave your premises.
+I used Weaviate, which is a vector database, and vector similarity search is prevalent in retrieval-augmented applications. As you might imagine, we will be using Weaviate to power our RAG application. In addition, we’ll be using local LLM and embedding models, making it safe and convenient when dealing with private and confidential information that mustn’t leave your premises.
 
 
 - this is very good resource for Get the Weaviate API key & Endpoint​
@@ -9,14 +9,13 @@
 https://orkes.io/content/integrations/vector-databases/weaviate
 
 
-2. Local embedding and LLM models I am most familiar with the LangChain LLM framework, so we will be using it to ingest documents as well as retrieve them. We will be using sentence_transformers/all-mpnet-base-v2 embedding model and zephyr-7b-alpha llm. Both of these models are open source and available on HuggingFace. 
+Local embedding and LLM models I am most familiar with the LangChain LLM framework, so we will be using it to ingest documents as well as retrieve them. We will be using sentence_transformers/all-mpnet-base-v2 embedding model and zephyr-7b-alpha llm. Both of these models are open source and available on HuggingFace. 
 
 
-
-3. **Ingest HubermanLabs podcasts into Weaviate**
+**Ingest HubermanLabs podcasts into Weaviate**
 
 I have learned that each channel on YouTube has an RSS feed, that can be used to fetch links to the latest 10 videos. As the RSS feed returns a XML, we need to employ a simple Python script to extract the links.
 
-4. After that we have the links to the videos at hand, we can use the YoutubeLoader from LangChain to retrieve the captions. Next, as with most RAG ingestions pipelines, we have to chunk the text into smaller pieces before ingestion. We can use the text splitter functionality that is built into LangChain.
+ After that we have the links to the videos at hand, we can use the YoutubeLoader from LangChain to retrieve the captions. Next, as with most RAG ingestions pipelines, we have to chunk the text into smaller pieces before ingestion. We can use the text splitter functionality that is built into LangChain.
 
-5. I created a simple chatbot using Gradio, Gradio is a fantastic library for creating interactive interfaces for LLMs, including chatbots.
+I created a simple chatbot using Gradio, Gradio is a fantastic library for creating interactive interfaces for LLMs, including chatbots.
