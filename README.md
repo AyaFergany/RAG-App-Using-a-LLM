@@ -15,6 +15,7 @@ https://github.com/aigeek0x0/zephyr-7b-alpha-langchain-chatbot
 
 
 Ingest HubermanLabs podcasts into Weaviate
+
 I have learned that each channel on YouTube has an RSS feed, that can be used to fetch links to the latest 10 videos. As the RSS feed returns a XML, we need to employ a simple Python script to extract the links.
 
 After that we have the links to the videos at hand, we can use the YoutubeLoader from LangChain to retrieve the captions. Next, as with most RAG ingestions pipelines, we have to chunk the text into smaller pieces before ingestion. We can use the text splitter functionality that is built into LangChain.
