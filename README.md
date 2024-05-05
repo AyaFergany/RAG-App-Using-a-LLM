@@ -14,7 +14,10 @@ Local embedding and LLM models I am most familiar with the LangChain LLM framewo
 https://github.com/aigeek0x0/zephyr-7b-alpha-langchain-chatbot
 
 
-Ingest HubermanLabs podcasts into Weaviate
+
+
+
+**Ingest HubermanLabs podcasts into Weaviate**
 
 I have learned that each channel on YouTube has an RSS feed, that can be used to fetch links to the latest 10 videos. As the RSS feed returns a XML, we need to employ a simple Python script to extract the links.
 
