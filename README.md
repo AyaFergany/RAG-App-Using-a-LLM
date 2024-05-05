@@ -7,7 +7,7 @@ Here are the key components of our project:
 ## Weaviate Integration
 - Weaviate serves as our vector database. It allows us to ingest and retrieve documents efficiently.
 - To connect to Weaviate, you’ll need the Weaviate API key and endpoint. You can find these details in the Weaviate dashboard or configure them programmatically.
-  https://orkes.io/content/integrations/vector-databases/weaviate
+  (https://orkes.io/content/integrations/vector-databases/weaviate)
 
 ## Local Embedding and LLM Models
 - I’ve chosen the sentence\_transformers/all-mpnet-base-v2 embedding model and the zephyr-7b-alpha LLM from Hugging Face.
