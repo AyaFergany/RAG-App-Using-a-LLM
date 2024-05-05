@@ -10,16 +10,16 @@ Here are the key components of our project:
   https://orkes.io/content/integrations/vector-databases/weaviate
 
 ## Local Embedding and LLM Models
-- We’ve chosen the sentence\_transformers/all-mpnet-base-v2 embedding model and the zephyr-7b-alpha LLM from Hugging Face.
+- I’ve chosen the sentence\_transformers/all-mpnet-base-v2 embedding model and the zephyr-7b-alpha LLM from Hugging Face.
 - These models are open source and well-suited for our use case.
 
 ## Ingesting HubermanLabs Podcasts into Weaviate
 - YouTube channels have RSS feeds that provide links to the latest videos.
-- We can extract these links using a simple Python script.
+- I can extract these links using a simple Python script.
 - After obtaining the video links, we use the YoutubeLoader from LangChain to retrieve captions.
 - The text is then chunked into smaller pieces using the text splitter functionality in LangChain.
 
 ## Creating a Simple Chatbot with Gradio
 - Gradio is an excellent library for building interactive interfaces for LLMs, including chatbots.
-- We’ve created a basic chatbot using Gradio, which allows users to interact with the model through a user-friendly interface.
+- I’ve created a basic chatbot using Gradio, which allows users to interact with the model through a user-friendly interface.
 - The chatbot responds to user input and displays the conversation history.
