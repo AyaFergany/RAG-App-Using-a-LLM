@@ -1,7 +1,7 @@
 # RAG-App-Using-a-LLM
 
 
-# RAG-App-Using-a-LLM
+I used Weaviate, which is a vector database, and vector similarity search is prevalent in retrieval-augmented applications. As you might imagine, we will be using Weaviate to power our RAG application. In addition, we’ll be using local LLM and embedding models, making it safe and convenient when dealing with private and confidential information that mustn’t leave your premises.
 
 
 this is very good resource for Get the Weaviate API key & Endpoint​
