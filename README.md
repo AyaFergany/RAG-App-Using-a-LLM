@@ -1,21 +1,25 @@
 # RAG-App-Using-a-LLM
 
+In this project, we leverage Weaviate, a vector database, to power our retrieval-augmented generation (RAG) application. Weaviate enables efficient vector similarity search, which is crucial for building effective RAG systems. Additionally, we use local language model (LLM) and embedding models to ensure privacy and confidentiality of sensitive information.
 
-I used Weaviate, which is a vector database, and vector similarity search is prevalent in retrieval-augmented applications. As you might imagine, we will be using Weaviate to power our RAG application. In addition, we’ll be using local LLM and embedding models, making it safe and convenient when dealing with private and confidential information that mustn’t leave your premises.
+Here are the key components of our project:
 
+## Weaviate Integration
+- Weaviate serves as our vector database. It allows us to ingest and retrieve documents efficiently.
+- To connect to Weaviate, you’ll need the Weaviate API key and endpoint. You can find these details in the Weaviate dashboard or configure them programmatically.
+  https://orkes.io/content/integrations/vector-databases/weaviate
 
-- this is very good resource for Get the Weaviate API key & Endpoint​
+## Local Embedding and LLM Models
+- We’ve chosen the sentence\_transformers/all-mpnet-base-v2 embedding model and the zephyr-7b-alpha LLM from Hugging Face.
+- These models are open source and well-suited for our use case.
 
-https://orkes.io/content/integrations/vector-databases/weaviate
+## Ingesting HubermanLabs Podcasts into Weaviate
+- YouTube channels have RSS feeds that provide links to the latest videos.
+- We can extract these links using a simple Python script.
+- After obtaining the video links, we use the YoutubeLoader from LangChain to retrieve captions.
+- The text is then chunked into smaller pieces using the text splitter functionality in LangChain.
 
-
-Local embedding and LLM models I am most familiar with the LangChain LLM framework, so we will be using it to ingest documents as well as retrieve them. We will be using sentence_transformers/all-mpnet-base-v2 embedding model and zephyr-7b-alpha llm. Both of these models are open source and available on HuggingFace. 
-
-
-**Ingest HubermanLabs podcasts into Weaviate**
-
-I have learned that each channel on YouTube has an RSS feed, that can be used to fetch links to the latest 10 videos. As the RSS feed returns a XML, we need to employ a simple Python script to extract the links.
-
- After that we have the links to the videos at hand, we can use the YoutubeLoader from LangChain to retrieve the captions. Next, as with most RAG ingestions pipelines, we have to chunk the text into smaller pieces before ingestion. We can use the text splitter functionality that is built into LangChain.
-
-I created a simple chatbot using Gradio, Gradio is a fantastic library for creating interactive interfaces for LLMs, including chatbots.
+## Creating a Simple Chatbot with Gradio
+- Gradio is an excellent library for building interactive interfaces for LLMs, including chatbots.
+- We’ve created a basic chatbot using Gradio, which allows users to interact with the model through a user-friendly interface.
+- The chatbot responds to user input and displays the conversation history.
