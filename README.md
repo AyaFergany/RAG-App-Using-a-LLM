@@ -14,9 +14,13 @@ Here are the key components of our project:
 - These models are open source and well-suited for our use case.
 
 ## Ingesting HubermanLabs Podcasts into Weaviate
-- YouTube channels have RSS feeds that provide links to the latest videos.
+- YouTube channels have RSS feeds that provide links to the latest videos,
+- This is very useful for knowing how to get RSS feed URLs for Youtube channel or playlist (https://www.bing.com/videos/search?q=How+to+Get+an+RSS+Feed+for+a+YouTube+Channel&view=detail&mid=3C95CB71B90D3F8DB6B53C95CB71B90D3F8DB6B5&FORM=VIRE).
+- YouTube RSS Feed URLs:
+  -  YouTube Channel RSS Feed URL: https://www.youtube.com/feeds/videos.xml?channel_id=&parentCsn=dLFP4Q
+  -  YouTube Playlist RSS Feed URL: https://www.youtube.com/feeds/videos.xml?playlist_id=&parentCsn=dLFP4Q
 - I can extract these links using a simple Python script.
-- After obtaining the video links, we use the YoutubeLoader from LangChain to retrieve captions.
+- After obtaining the video links, I use the YoutubeLoader from LangChain to retrieve captions.
 - The text is then chunked into smaller pieces using the text splitter functionality in LangChain.
 
 ## Creating a Simple Chatbot with Gradio
