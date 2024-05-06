@@ -12,6 +12,11 @@ Here are the key components of our project:
 ## Local Embedding and LLM Models
 - I’ve chosen the sentence\_transformers/all-mpnet-base-v2 embedding model and the zephyr-7b-alpha LLM from Hugging Face.
 - These models are open source and well-suited for our use case.
+- Intended uses for sentence\_transformers/all-mpnet-base-v2
+  - this model is intented to be used as a sentence and short paragraph encoder. Given an input text, it ouptuts a vector which captures the semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.
+  
+
+By default, input text longer than 384 word pieces is truncated.
 
 ## Ingesting HubermanLabs Podcasts into Weaviate
 - YouTube channels have RSS feeds that provide links to the latest videos,
