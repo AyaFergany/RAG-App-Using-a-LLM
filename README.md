@@ -29,7 +29,7 @@ By default, input text longer than 384 word pieces is truncated.
 - After obtaining the video links, I use the YoutubeLoader from LangChain to retrieve captions.
 - The text is then chunked into smaller pieces using the text splitter functionality in LangChain.
 
-## Creating a Simple Chatbot with Gradio
+## Creatinga  Chatbot with Gradio
 - Gradio is an excellent library for building interactive interfaces for LLMs, including chatbots.
-- I’ve created a basic chatbot using Gradio, which allows users to interact with the model through a user-friendly interface.
+- I’ve created a chatbot using Gradio, which allows users to interact with the model through a user-friendly interface.
 - The chatbot responds to user input and displays the conversation history.
